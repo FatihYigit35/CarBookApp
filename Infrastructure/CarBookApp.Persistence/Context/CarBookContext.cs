@@ -12,7 +12,7 @@ namespace CarBookApp.Persistence.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-           optionsBuilder.UseSqlServer("Server=db16381.public.databaseasp.net; Database=db16381; User Id=db16381; Password=9o+CY_7z5f!P; Encrypt=False; MultipleActiveResultSets=True; ");
+           optionsBuilder.UseSqlServer("Server=db16381.public.databaseasp.net; Database=db16381; User Id=db16381; Password=9o+CY_7z5f!P; Encrypt=True; TrustServerCertificate=True; MultipleActiveResultSets=True; ");
         }
 
         public DbSet<About> Abouts { get; set; }
