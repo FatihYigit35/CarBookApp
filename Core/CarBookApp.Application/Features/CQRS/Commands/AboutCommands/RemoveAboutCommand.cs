@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace CarBookApp.Application.Features.CQRS.Commands.AboutCommands
 {
-    public class RemoveAboutCommand(int ıd)
+    public class RemoveAboutCommand(int id)
     {
-        public int Id { get; set; } = ıd;
+        public int Id { get; set; } = id;
     }
 }
