@@ -9,23 +9,17 @@ using System.Threading.Tasks;
 
 namespace CarBookApp.Application.Features.CQRS.Handlers.BannerHandlers.Write
 {
-    public class CreateResultCommandHandler(IRepository<Banner> repository)
+    public class RemoveBannerCommandHansler(IRepository<Banner> repository)
     {
         private readonly IRepository<Banner> _repository = repository;
-
-        public async Task Handle(CreateBannerCommand command)
+        public async Task Handle(RemoveBannerCommand command)
         {
-            var banner = new Banner
-            {
-                Title = command.Title,
-                Description = command.Description,
-                VideoDescription = command.VideoDescription,
-                VideoUrl = command.VideoUrl
-            };
+            var banner = await _repository.GetByIdAsync(command.Id);
             if (banner != null)
             {
-                await _repository.AddAsync(banner);
+                await _repository.DeleteAsync(banner);
             }
         }
     }
 }
+

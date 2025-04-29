@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CarBookApp.Application.Features.CQRS.Handlers.BannerHandlers.Write
 {
-    public class UpdateResultCommandHandler(IRepository<Banner> repository)
+    public class UpdateBannerCommandHandler(IRepository<Banner> repository)
     {
         private readonly IRepository<Banner> _repository = repository;
 
