@@ -1,5 +1,4 @@
-﻿using CarBookApp.Application.Features.CQRS.Results.AboutResult;
-using CarBookApp.Application.Features.CQRS.Results.BannerResult;
+﻿using CarBookApp.Application.Features.CQRS.Results.BannerResult;
 using CarBookApp.Application.Interfaces;
 using CarBookApp.Domain.Entities;
 using System;
