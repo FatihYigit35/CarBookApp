@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CarBookApp.Application.Features.CQRS.Handlers.BannerHandlers.Write
 {
-    public class RemoveBannerCommandHansler(IRepository<Banner> repository)
+    public class RemoveBannerCommandHandler(IRepository<Banner> repository)
     {
         private readonly IRepository<Banner> _repository = repository;
         public async Task Handle(RemoveBannerCommand command)

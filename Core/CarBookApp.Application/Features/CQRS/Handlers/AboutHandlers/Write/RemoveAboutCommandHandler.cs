@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CarBookApp.Application.Features.CQRS.Handlers.AboutHandlers.Write
 {
-    public class RemoveAboutCommandHansler(IRepository<About> repository)
+    public class RemoveAboutCommandHandler(IRepository<About> repository)
     {
         private readonly IRepository<About> _repository = repository;
         public async Task Handle(RemoveAboutCommand command)
