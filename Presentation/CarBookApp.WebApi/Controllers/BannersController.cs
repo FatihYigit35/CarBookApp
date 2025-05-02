@@ -14,13 +14,13 @@ namespace CarBookApp.WebApi.Controllers
         GetBannerByIdQueryHandler getBannerByIdQueryHandler,
         CreateBannerCommandHandler createBannerCommandHandler,
         UpdateBannerCommandHandler updateBannerCommandHandler,
-        RemoveBannerCommandHansler removeBannerCommandHansler) : ControllerBase
+        RemoveBannerCommandHandler removeBannerCommandHansler) : ControllerBase
     {
         private readonly GetBannerQueryHandler _getBannerQueryHandler = getBannerQueryHandler;
         private readonly GetBannerByIdQueryHandler _getBannerByIdQueryHandler = getBannerByIdQueryHandler;
         private readonly CreateBannerCommandHandler _createBannerCommandHandler = createBannerCommandHandler;
         private readonly UpdateBannerCommandHandler _updateBannerCommandHandler = updateBannerCommandHandler;
-        private readonly RemoveBannerCommandHansler _removeBannerCommandHansler = removeBannerCommandHansler;
+        private readonly RemoveBannerCommandHandler _removeBannerCommandHansler = removeBannerCommandHansler;
 
         [HttpGet]
         public async Task<IActionResult> BannerList()

@@ -14,13 +14,13 @@ namespace CarBookApp.WebApi.Controllers
         GetAboutByIdQueryHandler getAboutByIdQueryHandler,
         CreateAboutCommandHandler createAboutCommandHandler,
         UpdateAboutCommandHandler updateAboutCommandHandler,
-        RemoveAboutCommandHansler removeAboutCommandHansler) : ControllerBase
+        RemoveAboutCommandHandler removeAboutCommandHansler) : ControllerBase
     {
         private readonly GetAboutQueryHandler _getAboutQueryHandler = getAboutQueryHandler;
         private readonly GetAboutByIdQueryHandler _getAboutByIdQueryHandler = getAboutByIdQueryHandler;
         private readonly CreateAboutCommandHandler _createAboutCommandHandler = createAboutCommandHandler;
         private readonly UpdateAboutCommandHandler _updateAboutCommandHandler = updateAboutCommandHandler;
-        private readonly RemoveAboutCommandHansler _removeAboutCommandHansler = removeAboutCommandHansler;
+        private readonly RemoveAboutCommandHandler _removeAboutCommandHansler = removeAboutCommandHansler;
 
         [HttpGet]
         public async Task<IActionResult> AboutList()
